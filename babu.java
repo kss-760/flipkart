@@ -9,3 +9,6 @@ amma
 nanna
 tammudu
 akka chelli
+bava
+akka
+papa
