@@ -29,7 +29,20 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+ <repositories>  
+	 <repository>  
+		 <id>nexus</id> 
+		 <url>http://13.233.86.218:8081/repository/maven-proxy/</url>  
+	 </repository>  
+	</repositories> 
 
+	
+	<pluginRepositories>
+		 <pluginRepository>
+			 <id>nexus</id>
+			  <url>http://13.233.86.218:8081/repository/maven-proxy/</url>
+				   </pluginRepository> 
+			 </pluginRepositories>
 	<dependencies>
 		
 		<dependency>
