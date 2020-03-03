@@ -32,7 +32,7 @@
  <repositories>  
 	 <repository>  
 		 <id>nexus</id> 
-		 <url>http://13.233.86.218:8081/repository/maven-proxy/</url>  
+		 <url>http://13.232.86.73:8081/repository/maven-proxy/</url>  
 	 </repository>  
 	</repositories> 
 
@@ -40,7 +40,7 @@
 	<pluginRepositories>
 		 <pluginRepository>
 			 <id>nexus</id>
-			  <url>http://13.233.86.218:8081/repository/maven-proxy/</url>
+			  <url>http://13.232.86.73:8081/repository/maven-proxy/</url>
 				   </pluginRepository> 
 			 </pluginRepositories>
 	<dependencies>
