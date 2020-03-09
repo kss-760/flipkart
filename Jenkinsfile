@@ -1,42 +1,34 @@
 node
 {
-
-  def mavenHome=tool name: "maven3.6.3"
-  
- stage('Checkout')
- {
- 	git branch: 'development', credentialsId: 'bed5a851-d84d-412e-87e7-bf9ce23c0e0e', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
- 
- }
- /*
- stage('Build')
- {
- sh  "${mavenHome}/bin/mvn clean package"
- }
- 
- stage('ExecuteSoanrQubeReport')
- {
- sh  "${mavenHome}/bin/mvn sonar:sonar"
- }
- 
- stage('UploadArtifactintoNexus')
- {
- sh  "${mavenHome}/bin/mvn deploy"
- }
- 
- stage('DeployAppintoTomcat')
- {
- sshagent(['cd93d61f-2d0f-4c60-8b33-34cf4fa888b0']) {
-  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.132.183:/opt/apache-tomcat-9.0.29/webapps/"
- }
- }
-*/
- stage('SendEmailNotification')
- {
- emailext body: '''Build is over..
-
- Regards,
- Mithun Technologies,
- 9980923226.''', subject: 'Build is over', to: 'devopstrainingblr@gmail.com'
- }
+   properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '6')), pipelineTriggers([githubPush()])])
+       def mavenhome = tool name: "maven 3.6.3"
+    stage('git')
+    {
+        git branch: 'develop', credentialsId: 'b4931b28-7b90-4c8a-8ccc-135725dd32b7', url: 'https://github.com/kss-760/flipkart.git'
+    }
+    stage('build')
+    {
+        sh "$mavenhome/bin/mvn clean package"
+    }
+    stage('sonarqube')
+    {
+        sh "$mavenhome/bin/mvn sonar:sonar"
+    }
+    stage('nexus')
+    {
+        sh "$mavenhome/bin/mvn deploy"
+    }
+    stage('deploytomcat')
+    {
+        sshagent(['a48409b5-bda8-40d5-a6fb-a7acd69ba9a0']) 
+        {
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.248.115:/opt/apache-tomcat-9.0.31/webapps/"
 }
+    }
+    stage('emailnotification')
+    {
+        emailext body: '''hi guys this is the build status
+Regards,
+Kishore.''', subject: 'build status', to: 'kishoreyuva50@gmail.com,kishoreyuva760@gmail.com,kishoreyuva6049@gmail.com'
+    }
+   }
