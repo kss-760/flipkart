@@ -1,4 +1,4 @@
-node
+node('label')
 {
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '6')), pipelineTriggers([githubPush()])])
        def mavenhome = tool name: "maven 3.6.3"
