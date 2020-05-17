@@ -20,7 +20,7 @@
 		m.kishore Technologies, 
 		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
 		Tirupathi123.
-		+91-7013595251,
+		+91-70135952,
 		<br>
 		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
 	</span>
