@@ -18,7 +18,7 @@ stage('git')
     {
         sh "${mavenHome}/bin/mvn deploy"
     }
-   
+   /*
     stage('tomcat')
     {
 sshagent(['ed3f28b3-3553-4d09-a27f-52f34addc654']) 
@@ -26,4 +26,5 @@ sshagent(['ed3f28b3-3553-4d09-a27f-52f34addc654'])
         sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.232.26.162:/opt/apache-tomcat-9.0.34/webapps"
     }
     }
+    */
     }
