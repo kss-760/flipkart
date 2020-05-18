@@ -31,14 +31,14 @@
 	 <repositories>  
 	 <repository>  
      <id>nexus</id>   
-	 <url>http://13.126.130.161:8081/repository/maven-proxy/</url>   
+	 <url>http://13.126.130.161:8081/repository/java-proxy/</url>   
 	 </repository> 
 	 </repositories> 
 	 
 	 <pluginRepositories>
 	  <pluginRepository>    
 	  <id>nexus</id>   
-	  <url>http://13.126.130.161:8081/repository/maven-proxy/</url> 
+	  <url>http://13.126.130.161:8081/repository/java-proxy/</url> 
 	  </pluginRepository>
 	  </pluginRepositories>
 
@@ -111,13 +111,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.126.130.161:8081/repository/maven-release/</url>
+	      <url>http://13.126.130.161:8081/repository/java-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.126.130.161:8081/repository/maven-snapshot/</url>
+	      <url>http://13.126.130.161:8081/repository/java-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
