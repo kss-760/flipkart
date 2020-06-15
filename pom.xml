@@ -39,7 +39,6 @@
 	  <pluginRepository>    
 	  <id>nexus</id>  
 	  <url>http://15.206.160.160:8081/repository/java-proxy/</url>
-     <url>http://3.6.87.250:8081/repository/java-proxy/</url>
 	  </pluginRepository>
 	  </pluginRepositories>
 
